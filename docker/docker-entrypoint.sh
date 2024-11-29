@@ -2,11 +2,19 @@
 
 [ -z "${DEBUG}" ] || set -x
 
-# Download the installer
-curl -sL ${BASE_URL:-https://jmlemetayer.github.io/abba}/install -o /tmp/install
+# Pfad zu überprüfen
+CHECK_FILE="/var/www/uninstall" # Ersetze dies mit dem tatsächlichen Pfad zur Datei
 
-# And run it in the workdir
-/bin/sh -e ${DEBUG:+-x} /tmp/install ${THEME}
+# Überprüfe, ob die Datei vorhanden ist
+if [ ! -f "$CHECK_FILE" ]; then
+    # Download the installer
+    curl -sL ${BASE_URL:-https://jmlemetayer.github.io/abba}/install -o /tmp/install
+
+    # And run it in the workdir
+    /bin/sh -e ${DEBUG:+-x} /tmp/install ${THEME}
+else
+    echo "Installer wurde nicht ausgeführt, da $CHECK_FILE vorhanden ist."
+fi
 
 # Uninstall on exit
 trap "" EXIT
