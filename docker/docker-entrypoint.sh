@@ -3,7 +3,7 @@
 [ -z "${DEBUG}" ] || set -x
 
 # Pfad zu überprüfen
-CHECK_FILE="/var/www/uninstall" # Ersetze dies mit dem tatsächlichen Pfad zur Datei
+CHECK_FILE="/var/www/.abba/uninstall" # Ersetze dies mit dem tatsächlichen Pfad zur Datei
 
 # Überprüfe, ob die Datei vorhanden ist
 if [ ! -f "$CHECK_FILE" ]; then
