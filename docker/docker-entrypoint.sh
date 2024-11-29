@@ -9,7 +9,7 @@ curl -sL ${BASE_URL:-https://jmlemetayer.github.io/abba}/install -o /tmp/install
 /bin/sh -e ${DEBUG:+-x} /tmp/install ${THEME}
 
 # Uninstall on exit
-trap "[ -x .abba/uninstall ] && .abba/uninstall" EXIT
+trap "" EXIT
 
 # Execute the command in background to be able to call the uninstall script
 # Using SIGWINCH as it is used by httpd for graceful exit
