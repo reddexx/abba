@@ -67,8 +67,8 @@ $table-bg-scale:              0% !default;
 
 // Forms
 
-$input-bg:                          $black !default;
-$input-color:                       $gray-800 !default;
+$input-bg:                          $gray-800 !default;
+$input-color:                       $white !default;
 $input-border-color:                $body-bg !default;
 $input-group-addon-color:           $gray-500 !default;
 $input-group-addon-bg:              $gray-700 !default;
@@ -76,7 +76,7 @@ $input-group-addon-bg:              $gray-700 !default;
 $form-check-input-bg:                     $white !default;
 $form-check-input-border:                 none !default;
 
-$form-file-button-color:          $white !default;
+$form-file-button-color:          $gray-900 !default;
 
 // Dropdowns
 
