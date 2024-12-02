@@ -32,7 +32,7 @@ the navigation menus to switch between available themes and pages.
 _Note that these previews are static pages used to get an idea of the final
 result, so some links and features are disabled or will not work as expected._
 
-[previews]: https://jmlemetayer.github.io/abba/previews/default
+[previews]: https://reddexx.github.io/abba/previews/default
 
 ### Local previews
 
@@ -42,7 +42,7 @@ Local previews can be achieved by using the [test docker image](docker):
 docker run --rm --tty --interactive \
     --publish 8080:80 \
     --volume ${PWD}:/var/www \
-    jmlemetayer/abba
+    reddexx/abba
 ```
 
 These previews allow you to test all the available themes and features locally
